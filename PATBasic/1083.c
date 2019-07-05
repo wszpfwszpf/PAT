@@ -3,16 +3,16 @@
 #include <stdlib.h>
 int main()
 {
-	int arr[10000] = {0};
+	int arr;
 	int arr2[10001] = {0};
 	int N;
 	scanf("%d",&N);
 	for (int i=0;i<N;i++)
 	{
-		scanf("%d",&arr[i]);
-		arr2[abs(i+1 - arr[i])]++;
+		scanf("%d",&arr);
+		arr2[abs(i+1 - arr)]++;
 	}
-	for (int i=10000;i>=0;i--)
+	for (int i=N;i>=0;i--)
 	{
 		if (arr2[i] > 1)
 		{
